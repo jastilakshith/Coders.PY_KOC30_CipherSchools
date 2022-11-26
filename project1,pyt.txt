@@ -65,12 +65,11 @@ while True:
              Number2=float(input("Number2:"))
              print("Answer:",mod(Number1,Number2))
         elif(Operation=='SR'):
-             Number1=float(input("Number1:"))
-             Number2=float(input("Number2:"))
-             print("Answer:",sqroot(Number1,Number2))     
+             Number1=float(input("Number:"))
+             print("Answer:",sqroot(Number1)     
         elif(Operation=='E'):
-             Number1=float(input("Number1:"))
-             Number2=float(input("Number2:"))
+             Number1=float(input("Number:"))
+             Number2=float(input("Power:"))
              print("Answer:",exp(Number1,Number2))
         elif(Operation=='1'):
             Value=float(input("Enter Angle in Degrees:"))
