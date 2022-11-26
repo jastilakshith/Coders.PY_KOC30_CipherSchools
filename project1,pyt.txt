@@ -1,0 +1,110 @@
+import math 
+def add(a,b):
+    return a+b
+def sub(a,b):
+    return a-b
+def mul(a,b):
+    return a*b
+def div(a,b):
+    return a/b
+def mod(a,b):
+    return a%b
+def sqroot(a):
+    return(math.sqrt(a))
+def exp(a,b):
+    return a**b
+def sin(a):
+    b=math.radians(a)
+    return(math.sin(b))    
+def cos(a):
+    b=math.radians(a)
+    return(math.cos(b))
+def tan(a):
+    b=math.radians(a)
+    return(math.tan(b))    
+def rtd(a):
+    return(math.degrees(a))
+def dtr(a):
+    return(math.radians(a))
+
+while True:
+        print("----------SCIENTIFIC CALCULATOR----------")
+        print('Select Operation type:')
+        print("Select 'A' to add")
+        print("Select 'S' to subtract")
+        print("Select 'M' to multiply")
+        print("Select 'D' to divide")
+        print("Select 'Mod' to apply modulus")
+        print("Select 'SR' to apply square root")
+        print("Select 'E' to apply exponent")
+        print("Select '1' for sine")
+        print("Select '2' for cosine")
+        print("Select '3' for tangent")
+        print("Select 'x' to convert Radians to degrees")
+        print("Select 'y' to convert Degrees to Radians")
+        print("Select 'z' for multiple operations")   
+        Operation=input("Select Operation:")
+        if(Operation=='A'):
+             Number1=float(input("Number1:"))
+             Number2=float(input("Number2:"))
+             print("Answer:",add(Number1,Number2))
+        elif(Operation=='S'):
+             Number1=float(input("Number1:"))
+             Number2=float(input("Number2:")) 
+             print("Answer:",sub(Number1,Number2))
+        elif(Operation=='M'):
+             Number1=float(input("Number1:"))
+             Number2=float(input("Number2:"))
+             print("Answer:",mul(Number1,Number2))   
+        elif(Operation=='D'):
+             Number1=float(input("Number1:"))
+             Number2=float(input("Number2:"))
+             print("Answer:",div(Number1,Number2))
+        elif(Operation=='Mod'):
+             Number1=float(input("Number1:"))
+             Number2=float(input("Number2:"))
+             print("Answer:",mod(Number1,Number2))
+        elif(Operation=='SR'):
+             Number1=float(input("Number1:"))
+             Number2=float(input("Number2:"))
+             print("Answer:",sqroot(Number1,Number2))     
+        elif(Operation=='E'):
+             Number1=float(input("Number1:"))
+             Number2=float(input("Number2:"))
+             print("Answer:",exp(Number1,Number2))
+        elif(Operation=='1'):
+            Value=float(input("Enter Angle in Degrees:"))
+            ans=sin(Value)
+            print("Answer:"+str(round(ans,3)))
+        elif(Operation=='2'):
+            Value=float(input("Enter Angle in Degrees:"))
+            ans=cos(Value)
+            print("Answer:"+str(round(ans,3)))
+        elif(Operation=='3'):
+            Value=float(input("Enter Angle in Degrees:"))
+            ans=tan(Value)
+            print("Answer:"+str(round(ans,3)))
+        elif(Operation=='x'):
+            Value=float(input("Enter value in Radians:"))
+            print("Answer:",rtd(Value),end='')
+            print("degrees")
+        elif(Operation=='y'):
+            Value=float(input("Enter value in Degrees:"))
+            print("Answer:",dtr(Value),end='')
+            print('radians')
+        elif(Operation=='z'):
+            print("Note:")
+            print("Use '*' for multiplication")
+            print("Use '**' to apply power")
+            Value=input("Enter required inputs:")
+            print("Answer:",eval(Value))
+        else:
+            print("invalid")
+        Next_calculation=input("Do you want to continue?(yes/no):")
+        if(Next_calculation=='no'):
+            print("END")
+            break
+        elif(Next_calculation=='yes'):
+            pass
+        else:
+            print("Please enter a valid answer")
